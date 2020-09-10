@@ -29,6 +29,10 @@ app.use(cors());
 // Setting up static director
 app.use(express.static(path.join(__dirname + 'dist/Record-Management')));
 
+
+// RESTful API root
+app.use('/api', studentRoute)
+
 // PORT
 const port = process.env.PORT || 8000;
 
@@ -40,4 +44,13 @@ app.listen(port, () => {
 // Find 404 and hand over to error handler
 app.use((req, res, next) => {
   next(createError(404));
+});
+
+// Index Route
+app.get('/', (req, res) => {
+  res.send('invaild endpoint');
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/Record-Management'));
 });
