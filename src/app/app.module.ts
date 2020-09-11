@@ -8,13 +8,15 @@ import { EditStudentComponent } from './components/edit-student/edit-student.com
 import { StudentsListComponent } from './components/students-list/students-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddStudentComponent,
     EditStudentComponent,
-    StudentsListComponent
+    StudentsListComponent,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
