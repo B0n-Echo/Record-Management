@@ -36,3 +36,30 @@ studentRoute.route('/read-student/:id').get((req, res, next) => {
     }
   })
 });
+
+studentRoute.route('/update-student/:id').put((req, res, next) => {
+  Student.findByIdAndUpdate(req.params.id,  {$set: req.body}, (error, student) => {
+    if(error) {
+      console.log("error", error)
+      return next(error);
+    } else{
+      res.json(student);
+      console.log('Student successfully updated!')
+    }
+  })
+});
+
+studentRoute.route('/delete-student/:id').delete((req, res, next)  => {
+  Student.findByIdAndRemove(req.params.id, (error, student) => {
+    if(error) {
+      console.log("error", error)
+      return next(error);
+    } else{
+          res.status(200).json({
+              msg: data
+      })
+    }
+  });
+});
+
+module.exports = studentRoute;
