@@ -11,7 +11,7 @@ import { error } from '@angular/compiler/src/util';
 })
 export class ApiService {
 
-  endpoint: string = 'http://localhost:8000/api';
+  endpoint = 'http://localhost:8000/api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor( private http: HttpClient) { }
@@ -21,8 +21,8 @@ export class ApiService {
     const API_URL = `${this.endpoint}/add-student`;
     return this.http.post(API_URL, data)
     .pipe(
-      catchError('Error');
-    )
+      catchError(this.errorMgmt)
+    );
   }
 
   GetStudents(): Observable<any> {
@@ -34,8 +34,8 @@ export class ApiService {
 
     return this.http.get(API_URL, {headers: this.headers})
     .pipe(
-      catchError('Error');
-    )
+      catchError(this.errorMgmt)
+    );
   }
 
   UpdateStudent(id, data): Observable<any> {
@@ -43,15 +43,29 @@ export class ApiService {
 
     return this.http.put(API_URL, data, {headers: this.headers})
     .pipe(
-      catchError('Error');
-    )
+      catchError(this.errorMgmt)
+    );
   }
 
   DeleteStudent(id): Observable<any> {
-    var API_URL = `${this.endpoint}/delete-student/${id}`;
+    const API_URL = `${this.endpoint}/delete-student/${id}`;
     return this.http.delete(API_URL)
       .pipe(
-        catchError('Error');
-      )
+        catchError(this.errorMgmt)
+      );
   }
+
+  errorMgmt(err: HttpErrorResponse): any {
+    let errorMessage = '';
+    if (err.error instanceof ErrorEvent) {
+      // Get client-side error
+      errorMessage = err.error.message;
+    } else {
+      // Get server-side error
+      errorMessage = `Error Code: ${err.status}\nMessage: ${err.message}`;
+    }
+    console.log(errorMessage);
+    return throwError(errorMessage);
+  }
+
 }
