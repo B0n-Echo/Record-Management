@@ -9,6 +9,7 @@ import { StudentsListComponent } from './components/students-list/students-list.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from './shared/api.service';
 
 @NgModule({
@@ -16,14 +17,16 @@ import { ApiService } from './shared/api.service';
     AppComponent,
     AddStudentComponent,
     EditStudentComponent,
-    StudentsListComponent,
-    HttpClientModule
+    StudentsListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
