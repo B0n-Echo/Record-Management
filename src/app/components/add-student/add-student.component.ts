@@ -22,15 +22,14 @@ export class AddStudentComponent implements OnInit {
   selectable = true;
   removable = true;
   addOnBlur = true;
-
-  @ViewChild('chipList') chipList;
-  @ViewChild('resetStudentForm') myNgForm;
-
+  @ViewChild('chipList', { static: true }) chipList;
+  @ViewChild('resetStudentForm', { static: true }) myNgForm;
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
 
   studentForm: FormGroup;
   subjectArray: Subject[] = [];
   SectioinArray: any = ['A', 'B', 'C', 'D', 'E'];
+  selected: any;
 
   constructor(
     public fb: FormBuilder,

@@ -30,5 +30,6 @@ import { ApiService } from './shared/api.service';
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
