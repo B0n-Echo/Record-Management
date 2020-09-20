@@ -33,6 +33,13 @@ export class StudentsListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  deleteStudent(index: number, e): void {
+    if(window.confirm('Are you sure you want to delete')) {
+      const data = this.dataSource.data;
+      data.splice((this.paginator.pageIndex * this.paginator.pageSize) + index, 1);
+      this.dataSource.data = data;
+      this.studentApi.DeleteStudent(e.id).subscribe();
+    }
+  }
 
 }
