@@ -65,6 +65,28 @@ export class EditStudentComponent implements OnInit {
     });
   }
 
+ /* Add dynamic languages */
+ add(event: MatChipInputEvent): void {
+  const input = event.input;
+  const value = event.value;
+  // Add language
+  if ((value || '').trim() && this.subjectArray.length < 5) {
+    this.subjectArray.push({ name: value.trim() })
+  }
+  // Reset the input value
+  if (input) {
+    input.value = '';
+  }
+}
+
+/* Remove dynamic languages */
+remove(subject: Subject): void {
+  const index = this.subjectArray.indexOf(subject);
+  if (index >= 0) {
+    this.subjectArray.splice(index, 1);
+  }
+}
+
 
 
 }
