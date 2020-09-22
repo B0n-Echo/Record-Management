@@ -87,6 +87,28 @@ remove(subject: Subject): void {
   }
 }
 
+/* Date */
+formatDate(e) {
+  var convertDate = new Date(e.target.value).toISOString().substring(0, 10);
+  this.studentForm.get('dob').setValue(convertDate, {
+    onlyself: true
+  })
+}
 
+/* Get errors */
+public handleError = (controlName: string, errorName: string) => {
+  return this.studentForm.controls[controlName].hasError(errorName);
+}
+
+/* Update book */
+updateStudentForm() {
+  console.log(this.studentForm.value)
+  var id = this.actRoute.snapshot.paramMap.get('id');
+  if (window.confirm('Are you sure you want to update?')) {
+    this.studentApi.UpdateStudent(id, this.studentForm.value).subscribe( res => {
+      this.ngZone.run(() => this.router.navigateByUrl('/students-list'))
+    });
+  }
+}
 
 }
