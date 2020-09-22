@@ -50,6 +50,21 @@ export class EditStudentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.updateBookForm();
   }
+
+  /* Reactive book form */
+  updateBookForm(): void{
+    this.studentForm = this.fb.group({
+      student_name: ['', [Validators.required]],
+      student_email: ['', [Validators.required]],
+      section: ['', [Validators.required]],
+      subjects: [this.subjectArray],
+      dob: ['', [Validators.required]],
+      gender: ['Male']
+    });
+  }
+
+
 
 }
