@@ -78,6 +78,14 @@ nodemon
 ```
 
 
+## Application
+- **MongoDB** stores user account information and persists sessions (so that a server crash does not log out all users.)
+- **Express** functions Node.js middleware to handle all HTTP requests and routing.
+- **Angular** handles HTML templating and data manipulation.
+- **Node.js** is the runtime for the application.
+
+There is also generous commenting throughout the application which helps explain critical parts of the application.
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
