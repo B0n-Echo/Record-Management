@@ -1,5 +1,8 @@
 # RecordManagement
 
+<img src="https://img.shields.io/badge/angular%20-%23e34f26.svg?&style=for-the-badge&logo=angular&logoColor=white" />&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/expressjs%20-%23339933.svg?&style=for-the-badge&logo=expressjs&logoColor=white" />&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/node.js%20-%23339933.svg?&style=for-the-badge&logo=node.js&logoColor=white" />&nbsp;&nbsp;<img src="https://img.shields.io/badge/mongodb%20-%23339933.svg?&style=for-the-badge&logo=mongodb&logoColor=white" />&nbsp;&nbsp;&nbsp;
+
+
 🤡 Students record management CRUD Application in MEAN Stack 🔨
 
 ## Table of Contents
