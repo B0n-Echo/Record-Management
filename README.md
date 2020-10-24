@@ -114,17 +114,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-📫 Reach me @ **nikhileshhpandey@gmail.com** or follow below
-
-<a href="https://twitter.com/nikhilp379" target="blank">
-  <img align="left" alt="Nikhilesh's Twitter" width="21px" src="https://raw.githubusercontent.com/edent/SuperTinyIcons/099dc12b59179d07d534069bc8551718f786d91a/images/svg/twitter.svg" />
-</a>
-
-<a href="https://linkedin.com/in/nikhilesh-h-pandey" target="blank">
-  <img align="left" alt="Nikhilesh's Linkdin" width="21px" src="https://raw.githubusercontent.com/edent/SuperTinyIcons/099dc12b59179d07d534069bc8551718f786d91a/images/svg/linkedin.svg" />
-</a>
-
-Project Link: [https://github.com/B0n-Echo/Record-Management](https://github.com/B0n-Echo/Record-Management)
+- 📫 Reach me @ **nikhileshhpandey@gmail.com** or
+- [Connect to Nikhil via LinkedIn](https://linkedin.com/in/nikhilesh-h-pandey)
+- [Follow Nikhil on Twitter](https://twitter.com/nikhilp379)
+- Project Link: [https://github.com/B0n-Echo/Record-Management](https://github.com/B0n-Echo/Record-Management)
 
 
 
